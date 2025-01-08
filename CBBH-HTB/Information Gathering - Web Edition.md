@@ -2,7 +2,7 @@
 
 ### Passive Reconnaissance
 
-In contrast, passive reconnaissance involves gathering information about the target `without directly interacting` with it. This relies on analysing publicly available information and resources, such as:
+In contrast, passive reconnaissance involves gathering information about the target `without directly interacting` with it. This relies on analysing publicly available information and resources, such as: 
 
 | Technique               | Description                                                                                                                     | Example                                                                                                                                           | Tools                                                                   | Risk of Detection                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -21,9 +21,9 @@ In contrast, passive reconnaissance involves gathering information about the tar
 
 - ![[Pasted image 20241231181840.png]]
 - `292`
-- ![[Pasted image 20241231182010.png]]
+	![[Pasted image 20241231182010.png]]
 
-
+	`admin@dnstinations.com` 
 ### Personal Research
 #### Dork
 ### Google
@@ -62,16 +62,17 @@ pan.baidu.com inurl:pwd
 
 ### DNS
 DNS servers store various resource records, each serving a specific purpose in the domain name resolution process. Let's explore some of the most common DNS concepts:
+[a-z][]
 
-|DNS Concept|Description|Example|
-|---|---|---|
-|`Domain Name`|A human-readable label for a website or other internet resource.|`www.example.com`|
-|`IP Address`|A unique numerical identifier assigned to each device connected to the internet.|`192.0.2.1`|
-|`DNS Resolver`|A server that translates domain names into IP addresses.|Your ISP's DNS server or public resolvers like Google DNS (`8.8.8.8`)|
-|`Root Name Server`|The top-level servers in the DNS hierarchy.|There are 13 root servers worldwide, named A-M: `a.root-servers.net`|
-|`TLD Name Server`|Servers responsible for specific top-level domains (e.g., .com, .org).|[Verisign](https://en.wikipedia.org/wiki/Verisign) for `.com`, [PIR](https://en.wikipedia.org/wiki/Public_Interest_Registry) for `.org`|
-|`Authoritative Name Server`|The server that holds the actual IP address for a domain.|Often managed by hosting providers or domain registrars.|
-|`DNS Record Types`|Different types of information stored in DNS.|A, AAAA, CNAME, MX, NS, TXT, etc.|
+| DNS Concept                 | Description                                                                      | Example                                                                                                                                 |
+| --------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `Domain Name`               | A human-readable label for a website or other internet resource.                 | `www.example.com`                                                                                                                       |
+| `IP Address`                | A unique numerical identifier assigned to each device connected to the internet. | `192.0.2.1`                                                                                                                             |
+| `DNS Resolver`              | A server that translates domain names into IP addresses.                         | Your ISP's DNS server or public resolvers like Google DNS (`8.8.8.8`)                                                                   |
+| `Root Name Server`          | The top-level servers in the DNS hierarchy.                                      | There are 13 root servers worldwide, named A-M: `a.root-servers.net`                                                                    |
+| `TLD Name Server`           | Servers responsible for specific top-level domains (e.g., .com, .org).           | [Verisign](https://en.wikipedia.org/wiki/Verisign) for `.com`, [PIR](https://en.wikipedia.org/wiki/Public_Interest_Registry) for `.org` |
+| `Authoritative Name Server` | The server that holds the actual IP address for a domain.                        | Often managed by hosting providers or domain registrars.                                                                                |
+| `DNS Record Types`          | Different types of information stored in DNS.                                    | A, AAAA, CNAME, MX, NS, TXT, etc.                                                                                                       |
 
 Now that we've explored the fundamental concepts of DNS, let's dive deeper into the building blocks of DNS information – the various record types. These records store different types of data associated with domain names, each serving a specific purpose:
 
@@ -149,12 +150,14 @@ Le transfert de zone DNS également connu de son opcode mnémotechnique _AXFR_, 
 
 
 - After performing a zone transfer for the domain inlanefreight.htb on the target system, how many DNS records are retrieved from the target system's name server? Provide your answer as an integer, e.g, 123.
+	`22`
 ![[Pasted image 20250102163759.png]]
 - Within the zone record transferred above, find the ip address for ftp.admin.inlanefreight.htb. Respond only with the IP address, eg 127.0.0.1
 	![[Pasted image 20250102165249.png]]
-
+	`10.10.34.2`
 - Within the same zone record, identify the largest IP address allocated within the 10.10.200 IP range. Respond with the full IP address, eg 10.10.200.1
-	- ![[Pasted image 20250102165425.png]]
+	 `10.10.200.10`
+	![[Pasted image 20250102165425.png]]
 
 
 ### Peu etre une erreur mais on garde voir ..
@@ -175,11 +178,11 @@ While manual analysis of `HTTP headers` and reverse `DNS lookups` can be effecti
 
 Several tools are available to aid in the discovery of virtual hosts:
 
-|Tool|Description|Features|
-|---|---|---|
-|[gobuster](https://github.com/OJ/gobuster)|A multi-purpose tool often used for directory/file brute-forcing, but also effective for virtual host discovery.|Fast, supports multiple HTTP methods, can use custom wordlists.|
-|[Feroxbuster](https://github.com/epi052/feroxbuster)|Similar to Gobuster, but with a Rust-based implementation, known for its speed and flexibility.|Supports recursion, wildcard discovery, and various filters.|
-|[ffuf](https://github.com/ffuf/ffuf)|Another fast web fuzzer that can be used for virtual host discovery by fuzzing the `Host` header.|Customizable wordlist input and filtering options.|
+| Tool                                                 | Description                                                                                                      | Features                                                        |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [gobuster](https://github.com/OJ/gobuster)           | A multi-purpose tool often used for directory/file brute-forcing, but also effective for virtual host discovery. | Fast, supports multiple HTTP methods, can use custom wordlists. |
+| [Feroxbuster](https://github.com/epi052/feroxbuster) | Similar to Gobuster, but with a Rust-based implementation, known for its speed and flexibility.                  | Supports recursion, wildcard discovery, and various filters.    |
+| [ffuf](https://github.com/ffuf/ffuf)                 | Another fast web fuzzer that can be used for virtual host discovery by fuzzing the `Host` header.                | Customizable wordlist input and filtering options.              |
 
 ### gobuster
 
@@ -213,17 +216,17 @@ vHosts needed for these questions:
 - `inlanefreight.htb`
 
 + 1 Brute-force vhosts on the target system. What is the full subdomain that is prefixed with "web"? Answer using the full domain, e.g. "x.inlanefreight.htb"
-	`web17611.inlanefreight.htb:39442` 
+	`web17611.inlanefreight.htb` 
 + 0 Brute-force vhosts on the target system. What is the full subdomain that is prefixed with "vm"? Answer using the full domain, e.g. "x.inlanefreight.htb"
-	`vm5.inlanefreight.htb:39442`
+	`vm5.inlanefreight.htb`
 + 0 Brute-force vhosts on the target system. What is the full subdomain that is prefixed with "br"? Answer using the full domain, e.g. "x.inlanefreight.htb"
-	
+	`browse.inlanefreight.htb` 
 + 0 Brute-force vhosts on the target system. What is the full subdomain that is prefixed with "a"? Answer using the full domain, e.g. "x.inlanefreight.htb"
-	`admin.inlanefreight.htb:33441`
+	`admin.inlanefreight.htb`
 + 0 Brute-force vhosts on the target system. What is the full subdomain that is prefixed with "su"? Answer using the full domain, e.g. "x.inlanefreight.htb"
-	
+	`support.inlanefreight.htb``
 
-
+![[Pasted image 20250108173623.png]]
 
 ![[Pasted image 20250102202931.png]]
 
@@ -346,6 +349,7 @@ vHosts needed for these questions:
 ![[Pasted image 20250103124406.png]]
 
 ![[Pasted image 20250103124544.png]]
+
 Here also
 
 
@@ -429,7 +433,8 @@ While the exact syntax may vary slightly between search engines, the underlying 
 |`..` (range search)|Finds results within a specified numerical range.|`site:ecommerce.com "price" 100..500`|Look for products priced between 100 and 500 on an e-commerce website.|
 |`" "` (quotation marks)|Searches for exact phrases.|`"information security policy"`|Find documents mentioning the exact phrase "information security policy".|
 |`-` (minus sign)|Excludes terms from the search results.|`site:news.com -inurl:sports`|Search for news articles on news.com excluding sports-related content.|
-
+- https://www.exploit-db.com/google-hacking-database
+- 
 ## Web Archives
 
 
@@ -467,4 +472,29 @@ Answer the question(s) below to complete this Section and earn cubes!
 
 
 
+
+## Automating Recon
+
+
+## Skills Assessment
+vHosts needed for these questions:
+
+- `inlanefreight.htb`
+
++ 1 What is the IANA ID of the registrar of the inlanefreight.com domain?
+	`468`
+	![[Pasted image 20250105194115.png]]
++ 1 What http server software is powering the inlanefreight.htb site on the target system? Respond with the name of the software, not the version, e.g., Apache.
+	`nginx`
+		![[Pasted image 20250105194321.png]]
++ 1 What is the API key in the hidden admin directory that you have discovered on the target system?
+	
++ 4 After crawling the inlanefreight.htb domain on the target system, what is the email address you have found? Respond with the full email, e.g., mail@inlanefreight.htb.
+	
++ 1 What is the API key the inlanefreight.htb developers will be changing too?
+	
+
+
+
+# END
 

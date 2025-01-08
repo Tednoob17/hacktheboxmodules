@@ -1,5 +1,5 @@
 
-- [Web Requests](https://academy.hackthebox.com/module/details/35) 
+ [Web Requests](https://academy.hackthebox.com/module/details/35) 
 
 
 ### Types of headers 
