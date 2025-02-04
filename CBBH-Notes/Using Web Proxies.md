@@ -28,6 +28,7 @@ While the primary use of web proxies is to capture and replay HTTP requests, the
 One very useful tool in Linux is [proxychains](https://github.com/haad/proxychains), which routes all traffic coming from any command-line tool to any proxy we specify. `Proxychains` adds a proxy to any command-line tool and is hence the simplest and easiest method to route web traffic of command-line tools through our web proxies.
 
 To use `proxychains`, we first have to edit `/etc/proxychains.conf`, comment out the final line and add the following line at the end of it:
+
 ![[Pasted image 20241228170631.png]]
 
 ![[Pasted image 20241228170838.png]]
@@ -83,6 +84,7 @@ while read -r line; do
   echo -n "$line" | md5sum
 done < `fzf-wordlists` > hashed_wordlists.txt
 ```
+
 
 
 ![[Pasted image 20241230033826.png]]
@@ -219,3 +221,4 @@ done < `fzf-wordlists` > perso_hash.txt
 
 ![[Pasted image 20241230220323.png]]
 
+# END

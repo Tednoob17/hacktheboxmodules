@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CBBH-Notes/Information Gathering - Web Edition.md",
+                "file": "CBBH-Notes/CBBH Modules list.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Information Gathering - Web Edition"
+              "title": "CBBH Modules list"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CBBH-Notes/Information Gathering - Web Edition.md",
+                "file": "CBBH-Notes/CBBH Modules list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Information Gathering - Web Edition"
+              "title": "Backlinks for CBBH Modules list"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CBBH-Notes/Information Gathering - Web Edition.md",
+                "file": "CBBH-Notes/CBBH Modules list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Information Gathering - Web Edition"
+              "title": "Outgoing links from CBBH Modules list"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CBBH-Notes/Information Gathering - Web Edition.md",
+                "file": "CBBH-Notes/CBBH Modules list.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Information Gathering - Web Edition"
+              "title": "Outline of CBBH Modules list"
             }
           }
         ]
@@ -170,9 +170,18 @@
   },
   "active": "1d99f5884b817bee",
   "lastOpenFiles": [
+    "CBBH-Notes/Web Requests.md",
+    "CBBH-Notes/CBBH Modules list 1.md",
+    "CBBH-HTB/Web Requests.md",
+    "CBBH-HTB/Using Web Proxies.md",
+    "CBBH-Notes/Using Web Proxies.md",
+    "CBBH-Notes/Attacking Web Applications with Ffuf.md",
+    "README.md",
+    "CBBH-Notes/SQL Injection Fundamentals.md",
+    "CBBH-Notes/Javascript Deobfuscation.md",
+    "CBBH-Notes/Introduction to Web Applications.md",
     "CBBH-Notes/Information Gathering - Web Edition.md",
     "CBBH-Notes/Information Gathering - Web Edition.md",
-    "CBBH-HTB/CBBH Modules list.md",
     "CBBH-HTB/Pasted image 20241230212241.png",
     "CBBH-HTB/Attacking Web Applications with Ffuf.md",
     "CBBH-HTB/Pasted image 20250102165425.png",
@@ -186,7 +195,6 @@
     "CBBH-HTB/Pasted image 20250103222406.png",
     "CBBH-Notes/Cross-Site Scripting (XSS).md",
     "CBBH-Notes/Day program.md",
-    "CBBH-Notes/CBBH Modules list.md",
-    "CBBH-Notes/Attacking Web Applications with Ffuf.md"
+    "CBBH-Notes/CBBH Modules list.md"
   ]
 }
